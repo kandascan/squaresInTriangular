@@ -19,7 +19,6 @@ namespace CalculationTests
             var b = new MyPoint(3, 3);
             var c = new MyPoint(6, 0);
             var d = new MyPoint(6, 3);
-
             var m = 3;
             var tmpPoint = new MyPoint(3, 0);
             var square = Calculation.Calculation.CreateSquare(tmpPoint, m);
@@ -36,15 +35,13 @@ namespace CalculationTests
             Assert.AreEqual(square.d.x, d.x);
             Assert.AreEqual(square.d.y, d.y);
         }
-
-
+        
         [Test]
         public void TraingularShouldContainSquare()
         {
             var n = 10;
             var m = 3;
             var tmpPoint = new MyPoint(0, 4);
-
             var triangular = new MyTriangular(n);
             var square = Calculation.Calculation.CreateSquare(tmpPoint, m);
             var result = Calculation.Calculation.CheckSquareInTriangular(square, triangular);

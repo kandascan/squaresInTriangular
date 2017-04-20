@@ -36,23 +36,21 @@ namespace Calculation
         {
             if (n <= 0 || m <= 0)
                 throw new Exception("Input value cannot be 0 or less than 0");
+
             var counter = n / m;
-
             var tmpPoint = new MyPoint(0, 0);
-
             var triangular = new MyTriangular(n);
-
             var squareNumbers = 0;
-
             var tmpHeight = 0;
+
             for (var i = 0; i < counter; i++)
             {
                 for (var j = 0; j < counter; j++)
                 {
                     var square = CreateSquare(tmpPoint, m);
                     tmpPoint = new MyPoint(square.c.x, square.c.y);
-
                     var containSquare = CheckSquareInTriangular(square, triangular);
+
                     if (containSquare)
                         squareNumbers += 1;
                     else
