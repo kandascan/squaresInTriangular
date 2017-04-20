@@ -34,8 +34,8 @@ namespace Calculation
 
         public static int Process(int n, int m)
         {
-            if (n == 0 || m == 0)
-                throw new Exception("Input value cannot be 0");
+            if (n <= 0 || m <= 0)
+                throw new Exception("Input value cannot be 0 or less than 0");
             var counter = n / m;
 
             var tmpPoint = new MyPoint(0, 0);
